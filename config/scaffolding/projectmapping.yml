@@ -7,9 +7,11 @@ runtimes:
     type: flow
     stepId: /0
     reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.GB_1:readGlobalvariable
-- runtimeAlias: Cloud Designtime
-  assets:
   - name: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.integrations:Test_ConnListingAndGlobalVariable
     type: flow
     stepId: /1
     reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.SIQACloudStreamsTests:connetorOperations
+  - name: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.integrations:Test_ConnListingAndGlobalVariable
+    type: flow
+    stepId: /2
+    reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.SIQAJDBCAdapterTests.adapterServices:getData
