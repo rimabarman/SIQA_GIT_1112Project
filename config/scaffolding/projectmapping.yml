@@ -1,7 +1,7 @@
 version: "1.0"
 projectName: SIQA_GIT_1112Project
 runtimes:
-- runtimeAlias: Cloud Designtime
+- runtimeAlias: SIQA_ERT_11112
   assets:
   - name: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.integrations:Test_ConnListingAndGlobalVariable
     type: flow
