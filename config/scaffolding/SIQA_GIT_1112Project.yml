@@ -140,6 +140,30 @@ services:
   packages:
   - name: WmPublic
     version: 12.0.0.0.686
+- serviceName: project.siqa_git_1112.integrations:Sum
+  packages:
+  - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.4
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.686
 - serviceName: project.siqa_git_1112.integrations:Test_AlertCRTERT
   packages:
   - name: SIQA_GIT_1112Project
@@ -192,6 +216,30 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+- serviceName: project.siqa_git_1112.integrations:Test_Date
+  packages:
+  - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.4
+- serviceName: pub.date:currentNanoTime
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.686
 - serviceName: project.siqa_git_1112.integrations:Test_RestConn1
   packages:
   - name: SIQA_GIT_1112Project
