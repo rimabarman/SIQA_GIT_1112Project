@@ -8,11 +8,18 @@ packages:
   gitUsername: rimabarman
   gitBranch: main
 - name: SIQAJDBCAdapterTests
+  version: "1.0"
   gitServerName: rimaSCName
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: rimabarman
   gitBranch: main
 - name: DADA_GlobalVariable1
+  version: "1.0"
+  gitServerName: rimaSCName
+  gitUrl: https://github.com/manoj-jannu-IBM
+  gitUsername: rimabarman
+  gitBranch: main
+- name: SIQACloudStreamsTests
   gitServerName: rimaSCName
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: rimabarman
@@ -22,11 +29,17 @@ services:
   packages:
   - name: SIQA_GIT_1112Project
     version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: SIQACloudStreamsTests
+    version: "1.0"
 - serviceName: pub.alert:emit
   packages:
   - name: WmPublic
@@ -35,11 +48,17 @@ services:
   packages:
   - name: SIQA_GIT_1112Project
     version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: SIQACloudStreamsTests
+    version: "1.0"
 - serviceName: pub.string:stringToBytes
   packages:
   - name: WmPublic
