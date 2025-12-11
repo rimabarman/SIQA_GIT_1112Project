@@ -29,10 +29,17 @@ packages:
   version: 12.0.0.0.4
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
+- name: TPP_services_in_FCS
+  gitServerName: kvv
+  gitUrl: https://github.com/Karthik-V-IBM-10
+  gitUsername: Karthik-V-IBM-10
+  gitBranch: main
 services:
 - serviceName: project.siqa_git_1112.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:MyConnAlais
   packages:
   - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
     version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
@@ -52,6 +59,8 @@ services:
   packages:
   - name: SIQA_GIT_1112Project
     version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
   - name: SIQAJDBCAdapterTests
@@ -66,9 +75,11 @@ services:
     version: "1.0"
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
-- serviceName: project.siqa_git_1112.integrations:DAF_Msg
+- serviceName: project.siqa_git_1112.integrations:Copy_DAF_Msg
   packages:
   - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
     version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
@@ -88,9 +99,31 @@ services:
   packages:
   - name: WmPublic
     version: 12.0.0.0.686
+- serviceName: project.siqa_git_1112.integrations:DAF_Msg
+  packages:
+  - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.4
 - serviceName: project.siqa_git_1112.integrations:Test_AlertCRTERT
   packages:
   - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
     version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
@@ -113,6 +146,8 @@ services:
 - serviceName: project.siqa_git_1112.integrations:Test_ConnJDBC
   packages:
   - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
     version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
@@ -140,6 +175,8 @@ services:
   packages:
   - name: SIQA_GIT_1112Project
     version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
   - name: SIQAJDBCAdapterTests
@@ -157,6 +194,8 @@ services:
 - serviceName: project.siqa_git_1112.integrations:Test_deepclone
   packages:
   - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
     version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
