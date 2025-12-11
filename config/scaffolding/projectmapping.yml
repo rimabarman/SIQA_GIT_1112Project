@@ -12,12 +12,20 @@ runtimes:
     path: /drt
     action: POST
     reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.services:add3Ints
+  - name: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.integrations:Test_PublishDeploy
+    type: flow
+    stepId: /0
+    reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.services:add3Ints
 - runtimeAlias: SIQA_ERT_1116
   assets:
   - name: Rest_AddInt
     type: REST
     path: /ert
     action: POST
+    reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.services:add3Ints
+  - name: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.integrations:Test_PublishDeploy
+    type: flow
+    stepId: /1
     reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.services:add3Ints
 - runtimeAlias: SIQA_ERT_1115
   assets:
