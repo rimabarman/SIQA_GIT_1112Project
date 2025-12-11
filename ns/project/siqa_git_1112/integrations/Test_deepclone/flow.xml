@@ -414,4 +414,13 @@
 </MAPCOPY>
 </MAP>
 </INVOKE>
+
+<SEQUENCE NAME="IF" EXIT-ON="FAILURE" CONDITION="((&#39;clonedString&#39;!=%/string%))" FORM="IF">
+
+  <!-- nodes -->
+
+<EXIT NAME="THROWERROR" FROM="$parent" SIGNAL="FAILURE" FAILURE-MESSAGE="Deep clone service is not working">
+  <COMMENT></COMMENT>
+</EXIT>
+</SEQUENCE>
 </FLOW>
