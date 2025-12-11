@@ -5,10 +5,6 @@ runtimes:
   assets:
   - name: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.integrations:Test_ConnListingAndGlobalVariable
     type: flow
-    stepId: /0
-    reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.GB_1:readGlobalvariable
-  - name: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.integrations:Test_ConnListingAndGlobalVariable
-    type: flow
     stepId: /1
     reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.SIQACloudStreamsTests:connetorOperations
 - runtimeAlias: Cloud Designtime
@@ -24,3 +20,7 @@ runtimes:
     uid: fl6e3aa34bcf064f229f3c20b9a00db93a
     stepId: a0
     reference: project.siqa_git_1112.integrations:Test_deepclone
+  - name: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.integrations:Test_ConnListingAndGlobalVariable
+    type: flow
+    stepId: /0
+    reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.GB_1:readGlobalvariable
