@@ -426,7 +426,7 @@
 </MAP>
 </INVOKE>
 
-<SEQUENCE NAME="IF" EXIT-ON="FAILURE" CONDITION="((&#39;clonedString&#39;!=%/string%))" FORM="IF">
+<SEQUENCE NAME="IF" EXIT-ON="FAILURE" CONDITION="((%/clonedString%!=%/string%))" FORM="IF">
 
   <!-- nodes -->
 
