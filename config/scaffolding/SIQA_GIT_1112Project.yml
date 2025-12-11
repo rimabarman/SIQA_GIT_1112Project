@@ -26,10 +26,29 @@ packages:
   gitUsername: rimabarman
   gitBranch: main
 - name: WmSalesforceRESTProvider
+  version: 12.0.0.0.4
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
 - serviceName: project.siqa_git_1112.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:MyConnAlais
+  packages:
+  - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.4
+- serviceName: project.siqa_git_1112.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:MyRestConnAlias
   packages:
   - name: SIQA_GIT_1112Project
     version: "1.0"
@@ -95,6 +114,24 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+- serviceName: project.siqa_git_1112.integrations:Test_RestConn1
+  packages:
+  - name: SIQA_GIT_1112Project
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.4
 - serviceName: project.siqa_git_1112.integrations:Test_deepclone
   packages:
   - name: SIQA_GIT_1112Project
@@ -127,40 +164,30 @@ services:
     version: 12.0.0.0.686
 configurationVariables:
   jdbc.SAP TxStore Pool.maxConns: "10"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.sockBuffSize
-  : "8192"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.startupRetryCount
-  : "0"
-  jdbcfunc.SAPTxStore.failFastMode: false
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.poolIncrementSize
-  : "1"
-  jdbc.SAP TxStore Pool.poolThreshold: "0"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.socketLinger
+  : "-1"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.timeoutType
   : auto
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.tcpNoDelay
   : "false"
-  jdbc.SAP TxStore Pool.spyenabled: "false"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.poolable
-  : "true"
-  jdbc.SAP TxStore Pool.useSSL: "false"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth.consumerId
+  : 3MVG9wt4IL4O5wvIADNKl03CbBmCQKcAkAbkFDcpaTXkyVfv7X1O4s2cklJGvkgxFTHWN6GBLsMx_IKubmOL5
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.tcpNoDelay
+  : "false"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.keepAliveInterval
   : "300000"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.reuseAddr
-  : "false"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.providerUrl
+  : https://softwareag7-dev-ed.my.salesforce.com
   jdbc.SAP TxStore Pool.password: "{AES}nrGf3u7Wt20hFBGh5ZeEuQ=="
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.connectTimeout
   : "30000"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.accessTokenRefreshURLRequest
-  : URL Query String
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.enableCompression
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.reuseAddr
   : "false"
   jdbc.SAP TxStore Pool.spyparms: SpyAttributes=(log=(file)logs/spy/SAP_TxStore_Pool.log;logTName=yes;timestamp=yes)
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.idleTimeout
-  : "-1"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.sockBuffSize
+  : "8192"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.authorizationHeaderInTokenRefresh
   : "false"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.socketLinger
-  : "-1"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.readTimeout
   : "30000"
   jdbc.SAP TxStore Pool.snoopenabled: "false"
@@ -171,11 +198,8 @@ configurationVariables:
   : "true"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.hostnameVerifier
   : org.apache.http.conn.ssl.DefaultHostnameVerifier
-  jdbc.SAP TxStore Pool.minConns: "5"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.authorizationHeaderPrefix
   : Bearer
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.authenticationServerUrl
-  : https://login.salesforce.com/services/oauth2/token
   jdbc.SAP TxStore Pool.driverAlias: MySQL CC Driver
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.retryIfRequestSentOk
   : "true"
@@ -186,38 +210,129 @@ configurationVariables:
   : "1000"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cx.grant_type
   : refresh_token
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth.consumerId
-  : 3MVG9k02hQhyUgQCKlnwOVc1lTfY9AqPHmUIRA6I.ZqYzln.F3Vuok.Rk6d6F00IhbOJxstGzhIJDyuJGd0ft
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.providerUrl
   : https://sag53-dev-ed.develop.my.salesforce.com
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.expireTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.refreshAccessToken
+  : "true"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.idleTimeout
+  : "-1"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth_v20.accessTokenRefreshURLRequest
+  : URL Query String
+  jdbc.SAP TxStore Pool.waitingThread: "10"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth.accessToken
+  : "{AES}6oQAC5QKf4rNoVUXJPf6INUYrkAU7+Ek72dtoIINC2AKXPtu86RfqLjsGvcQwA4ztXVx0hFoVI0FyeAY2vQfXaFzhIEsf/YSCcLuucvkEoupeo1d4y3EYiTKqi6Qe77Z5jNMoKyzBW5XI8Z52PGaZMNdRDXuYXLxc46jkaH0ArzdQK+9v+nteAwFKlOwlTLswXGDpYmGO+xs+bzlU5206v/LFQKo8Q+VRPoEjYb7RswbZDK/YAczP/KgRMOBJ0bG"
+  jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth_v20.authenticationServerUrl
+  : https://login.salesforce.com/services/oauth2/token
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth_v20.authorizationServerUrl
+  : https://login.salesforce.com/services/oauth2/authorize
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.retryIfRequestSentOk
+  : "true"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth.accessToken
+  : "{AES}4YhLuTiDs+emViwMzJef/xExNAnxwY08B57VM7RIrHq056s9jFRK45CIbq/4h/tsdT08Wtx+d4rszDv+vXloGTy6HT6uQbkmxSE7FRRNZ9oTOmqjSHWrwD/AREmnBuT4rL8U6trln4Y06DIeM/DF+unWvMKhecaaTwaswKjn6Ek5666c/xfdWD6J8kgLjvD1kC5UWAi/2ePO+96grqtjNv/LFQKo8Q+VRPoEjYb7RswbZDK/YAczP/KgRMOBJ0bG"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.blockTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth.consumerSecret
+  : "{AES}4H4kzRSQCoqhCbac/LJfCNptKw2/5gnJOxd+va9Vxm3BjkQqvJDHgLNJF1/RmrFgWxKls8tNN7+zM8jvGEbZ3Z5vLfMi/uky/anYCcB33g5pAL+FCeJyfwtkuQYbEqGH/8sVAqjxD5VE+gSNhvtGzBtkMr9gBzM/8qBEw4EnRsY="
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.enableSNI
+  : "true"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth_v20.authorizationHeaderPrefix
+  : Bearer
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth_v20.authorizationHeaderInTokenRefresh
+  : "false"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.connectionEnabled
+  : "true"
+  jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.startupBackoffSecs
+  : "10"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.startupBackoffSecs
+  : "10"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth_v20.scope
+  : offline_access api refresh_token
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth.consumerSecret
+  : "{AES}7ENAityfehHx+6xPSMDezHK6xjF8O0xdz9AJrnTbtM7dmPOM0sJo73JPH5qz4zp47qPV5oi/tj/toHAtGTKtk6LErK9lMdZjpCOqXcV7ZDmeLk7TiJC5INI+p6tUPK6+/8sVAqjxD5VE+gSNhvtGzBtkMr9gBzM/8qBEw4EnRsY="
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.socketStaleCheck
+  : "true"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.minimumPoolSize
+  : "1"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.keepAliveInterval
+  : "300000"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.hostnameVerifier
+  : org.apache.http.conn.ssl.DefaultHostnameVerifier
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.sockBuffSize
+  : "8192"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.startupRetryCount
+  : "0"
+  jdbcfunc.SAPTxStore.failFastMode: false
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.poolIncrementSize
+  : "1"
+  jdbc.SAP TxStore Pool.poolThreshold: "0"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.poolIncrementSize
+  : "1"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.startupRetryCount
+  : "0"
+  jdbc.SAP TxStore Pool.spyenabled: "false"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth_v20.refreshAccessToken
+  : "true"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.poolable
+  : "true"
+  jdbc.SAP TxStore Pool.useSSL: "false"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.reuseAddr
+  : "false"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.accessTokenRefreshURLRequest
+  : URL Query String
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.maximumPoolSize
+  : "10"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.enableSNI
+  : "true"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.enableCompression
+  : "false"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.idleTimeout
+  : "-1"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.connectionEnabled
+  : "true"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.socketLinger
+  : "-1"
+  jdbc.SAP TxStore Pool.minConns: "5"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.authenticationServerUrl
+  : https://login.salesforce.com/services/oauth2/token
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.blockTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth.consumerId
+  : 3MVG9k02hQhyUgQCKlnwOVc1lTfY9AqPHmUIRA6I.ZqYzln.F3Vuok.Rk6d6F00IhbOJxstGzhIJDyuJGd0ft
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.retryCount
+  : "4"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.scope
   : offline_access api refresh_token
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.maximumPoolSize
   : "10"
   jdbc.SAP TxStore Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.refreshAccessToken
-  : "true"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.expireTimeout
   : "1000"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.retryCount
   : "4"
-  jdbc.SAP TxStore Pool.waitingThread: "10"
-  jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.readTimeout
+  : "30000"
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.accessTokenRefreshURL
   : https://login.salesforce.com/services/oauth2/token
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth.accessToken
-  : "{AES}4YhLuTiDs+emViwMzJef/xExNAnxwY08B57VM7RIrHq056s9jFRK45CIbq/4h/tsdT08Wtx+d4rszDv+vXloGTy6HT6uQbkmxSE7FRRNZ9oTOmqjSHWrwD/AREmnBuT4rL8U6trln4Y06DIeM/DF+unWvMKhecaaTwaswKjn6Ek5666c/xfdWD6J8kgLjvD1kC5UWAi/2ePO+96grqtjNv/LFQKo8Q+VRPoEjYb7RswbZDK/YAczP/KgRMOBJ0bG"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.blockTimeout
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.validateAfterInactivity
   : "1000"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.cn.enableSNI
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth_v20.refreshToken
+  : "{AES}iM8Dq5SutHdvHogICu8WmoqqUlEqaCDHMMY6DtNy5GB3TBmG6cWrFrYx9J+CXJgmB8g+kjOas5TZLaF6UNx8ER4+wTZ0lpQLKlfFqzPl8YP1UmdE0nB4W/yHaQVbm7NWelrdMk8nJUsTCpsWgfzamOMgEN4bn1LD0w/0J5l8TOrzr9fQRjv7N8yyfMhi/5Y1"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.connectTimeout
+  : "30000"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.poolable
   : "true"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.connectionEnabled
-  : "true"
-  jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
   ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth_v20.refreshToken
   : "{AES}E10Q0XaRGmtVOGCXGycjECxz5UDbcugAch3EMKbX3NsexViZJxysDO5cG8QgMQKrsxG2xgGvD/OELoqzQA4AOuQt/EEEwDZgaV4Tpz48nMS11f1PTOYnkx5djFCBr7HeqBpon58Yubm6Rlsaw8k96nnCwsZ4UMQ/L3hropqfZmCNxE7xZJ/RvcPMkZANAIyd"
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.startupBackoffSecs
-  : "10"
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.timeoutType
+  : auto
   jdbc.SAP TxStore Pool.userid: root
-  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyConnAlais.oauth.consumerSecret
-  : "{AES}7ENAityfehHx+6xPSMDezHK6xjF8O0xdz9AJrnTbtM7dmPOM0sJo73JPH5qz4zp47qPV5oi/tj/toHAtGTKtk6LErK9lMdZjpCOqXcV7ZDmeLk7TiJC5INI+p6tUPK6+/8sVAqjxD5VE+gSNhvtGzBtkMr9gBzM/8qBEw4EnRsY="
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.oauth_v20.accessTokenRefreshURL
+  : https://login.salesforce.com/services/oauth2/token
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cx.grant_type
+  : refresh_token
+  ? cloudstreamsconnection.project..siqa_git_1112..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MyRestConnAlias.cn.enableCompression
+  : "false"
