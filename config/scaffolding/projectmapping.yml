@@ -7,11 +7,6 @@ runtimes:
     type: flow
     stepId: /2
     reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.SIQAJDBCAdapterTests.adapterServices:getData
-  - name: Call_TPP_Flow
-    type: workflow
-    uid: fleacf1b39210d4fd0aaa18136c8b703fe
-    stepId: a0
-    reference: services:add3Ints
 - runtimeAlias: SIQA_ERT_1115
   assets:
   - name: Call_testdeepclone
@@ -27,3 +22,8 @@ runtimes:
     type: flow
     stepId: /1
     reference: fld_111819831_stage00.projects.fl27242b8cf3454ec7868ce0298a620910.WmPackageServiceProvider.SIQACloudStreamsTests:connetorOperations
+  - name: Call_TPP_Flow
+    type: workflow
+    uid: fleacf1b39210d4fd0aaa18136c8b703fe
+    stepId: a0
+    reference: services:add3Ints
